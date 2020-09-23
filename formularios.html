@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title> Aula de formularios </title>
+		</meta charset="utf-8" />
+	</head>
+
+	<body>
+		<h1>Formulários HTML</h1>
+
+		<form>
+			<fieldset>
+				<legend>CADASTRE-SE</legend>
+					<label for="nome">Nome:</label> 
+					<input type="text" name="nome" id="nome" placeholder="Digite seu nome!" maxlength="30" required />
+
+					<label for="sobrenome">Sobrenome: </label> <!--Recebe através do input "id" e joga no label através do "for"-->
+					<input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome!" maxlength="50" required />
+
+					<label for="E-mail">E-mail:</label><!--Vinculo de rótulo label com o input-->
+					<input type="E-mail" name="E-mail" id="E-mail"placeholder="Digite seu e-mail!" required />
+
+					<label for="senha">Senha:</label> 
+					<input type="password" name="Senha" id="senha" placeholder="Digite sua senha!" required />
+
+					<label for="idade">Idade:</label> 
+					<input type="number" name="idade" id="idade" placeholder="Digite sua idade!" required />
+			</fieldset> <br>
+
+			<fieldset>
+				<legend>OUTRAS INFORMAÇÕES</legend>
+					Sexo:
+						<input type="radio" name="sexo"/> Feminino
+					    <input type="radio" name="sexo"/> Masculino <br><!--O name tem que ser igual se não causa erro, os dois botôes são marcados ao mesmo tempo-->
+
+					<label for="nascimento">Data de nascimento:</label> 
+					<input type="date" name="nascimento" id="nascimento">
+
+					<select name="estado" id="estado">Estado:
+						<optgroup label="Sudeste">
+							<option value="São Paulo">São Paulo</option>
+							<option value="Rio de Janeiro">Rio de Janeiro</option>
+						</optgroup>
+
+						<optgroup label="Nordeste">
+							<option value="Ceara">Ceara</option>
+							<option value="Bahia">Bahia</option>
+							<option value="Paraíba" selected=>Paraíba</option>
+						</optgroup><!--Para todos o value é quem vai pára o e-mail ou banco de dados-->
+						
+						
+					</select>
+
+					<label for="cidade">Cidade:</label> 
+					<input type="" id="cidade" placeholder="Digite sua cidade!" list="cidades"/>
+					<datalist>
+						<option value="Osasco"></option>
+						<option value="Campinas"></option>
+						<option value="Barueri"></option>
+						<option value="Niteroi"></option>
+						<option value="João Pessoa"></option>
+						<option value="Campina Grade"></option>
+					</datalist>
+			</fieldset> <br>
+
+			<fieldset>
+				<legend>Quais das câmaras da JPS - PB você gostaria de trabalhar?</legend>
+					<input type="checkbox" name="camara" value="TecnologiaeInovacao"> Tecnologia e imovação
+					<input type="checkbox" name="camara" value="Aguas"> Águas
+					<input type="checkbox" name="camara" value="Residuos"> Resíduos
+					<input type="checkbox" name="camara" value="PoliticasPulicas"> Políticas públicas <br>
+									
+				    <textarea name="motivo" id="motivo" cols="50" rows="10" placeholder="Qual o motivo da escolha da(s) câmara(s)"></textarea>
+			</fieldset> <br>
+			
+	    <button type="submit">Enviar</button>
+		<button type="reset">Limpar</button>
+		</form>
+	</body>
+</html>
